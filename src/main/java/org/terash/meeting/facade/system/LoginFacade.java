@@ -21,7 +21,7 @@ public class LoginFacade {
 	@Consumes(MediaType.APPLICATION_JSON)
 	public String doLogin(LoginDto loginDto) {
 	
-		Member member = loginService.findMemberByLoginId(loginDto.getLoginId());
+		Member member = loginService.findMemberByLoginIdAndPassword(loginDto.getLoginId(), loginDto.getPassword());
 		
 		
 		return "Hello, " + member.getSurName();

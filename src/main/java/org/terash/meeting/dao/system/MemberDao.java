@@ -1,12 +1,11 @@
-package org.terash.meeting.service.system;
+package org.terash.meeting.dao.system;
 
 import javax.ejb.Local;
 
 import org.terash.meeting.entity.Member;
 
 @Local
-public interface LoginService {
+public interface MemberDao {
 	
 	Member findMemberByLoginIdAndPassword(String loginId, String password);
-
 }
